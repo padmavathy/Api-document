@@ -1,0 +1,14 @@
+<div id="jq-interiorNavigation" style="width: 275px; min-height: 133.7em;">
+<%#=link_to "Getting Started","#",:class=>"getting_started"%>
+<b><p width = "10px" style="height:20px;background-color:#788279;color:#D9E0F1;font-size:13px;text-align:center;padding-top:2px;margin :0 0 0.4em">API Methods</p></b>
+<%@api.each do |api|%>
+<div  class="jq-portlet"><h5 class="apilist" id="api_<%=api.id%>" style="cursor:pointer;"><%=api.name%><%=image_tag "/images/arrow-down.png", :id=>"arrow" %></h5><div class="jq-pBody" style="display: none;"><ul>
+<%@api_methods.each do |method|%>
+<% if method.api_list_id==api.id%>
+<li id="jq-n-Downloading-jQuery"><%=link_to_api_method(method)%></li>
+<%end%>
+<%end%>
+</ul>
+</div></div>
+<%end%>
+</div>

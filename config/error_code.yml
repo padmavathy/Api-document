@@ -1,0 +1,29 @@
+Authentication/Authorization Failed:
+  1001: Invalid credentials
+  1002: User doesnot exist with this email address.
+  1003: Already updated your password. Please try again.
+  1004: Parameters are missing.
+  1005: Authentication Token invalid.
+  1006: No Top creatos found.
+  1007: Record not found.
+  1008: Description is required.
+  1009: No messages in your inbox.
+  1010: No messages in your send items.
+  1011: No conversation Found.
+  1012: Invalid item id/order id
+  1013: Merchant account not created.
+  1014: No items sold.
+  1015: You should purchase before start download.
+  1016: Content not found.
+  1017: Payment was not made successful.
+  1018: Card not valid.
+  1019: Already you have purchased this item.
+  1020: Authentication Token Missing.
+  1021: Account has not created, Please enter valid bank details.
+  1022: Need more information. Please give DOB, Password, Terms and Conditions. Then it needs to be redirect to sign up page.
+  1023: post is required
+  1024: successfully unsubscribed
+  1025: feeds not found
+  1026: Comment not created
+  1027: No comments found
+  

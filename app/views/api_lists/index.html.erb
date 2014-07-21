@@ -1,0 +1,29 @@
+<div id="jq-primaryContent" style="width:867px; min-height: 133.7em;">
+<h1 style="font-size:18px">Listing api_lists</h1>
+<table>
+  <tr>
+    <th  style="font-size:16px;text-align:left;">Name&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <!--<th  style="font-size:20px;">Status</th>
+    <th></th>
+    <th></th>
+    <th></th>-->
+  </tr>
+
+<% @api_lists.each do |api_list| %>
+  <tr>
+    <td style="font-size:14px; text-align: left;" width="150px"><%= api_list.name %></td>
+		<td width="150px" style="font-size:14px;"><a href="api/<%=api_list.id%>">Add Methods</td>
+		<td width="150px" style="font-size:14px;"><a href="apimethods/<%=api_list.id%>">Edit Methods</td>
+    <td><%#= api_list.status %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Show', api_list %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Edit', edit_api_list_path(api_list) %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Destroy', api_destroy_path(api_list.id), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p style="font-size:16px;">
+<%= link_to 'New Api list', new_api_list_path %>
+</p>
+</div>

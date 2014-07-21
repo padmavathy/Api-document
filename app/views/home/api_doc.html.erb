@@ -1,0 +1,28 @@
+<%=link_to "<< Back", "/"%>
+<%@api.each do |api|%>
+<div class="jq-portlet"><h5 class="apilist" id="api_<%=api.id%>"><%=api.name%><%=image_tag "/images/arrow-down.png", :id=>"arrow" %></h5><div class="jq-pBody" style="display: none;"><ul>
+<%@api_methods.each do |method|%>
+<% if method.api_list_id==api.id%>
+<li id="jq-n-Downloading-jQuery"><%=link_to method.name, api_method_desc_path(method.id), :class=>"#{@api_method.id==method.id.to_s ? 'selected' : ''} method_def", :id=>"m_"+"#{method.id}"%></li>
+<%end%>
+<%end%>
+</ul>
+</div></div>
+<%end%>
+</div>
+<div id="jq-primaryContent" style="width:850px; min-height: 133.7em;">
+<%=render :partial=>"method_desc"%>
+</div>
+
+<script>
+$(document).ready(function(){
+$('.apilist').click(function(){
+if($(this).siblings('.jq-pBody').css('display')=="none")
+$($(this).children('img')).attr('src','/images/arrow-up.png');
+else
+$($(this).children('img')).attr('src','/images/arrow-down.png');
+$(this).siblings('.jq-pBody').slideToggle('fast');
+});
+$('#api_<%=@api_method.api_list_id%>').click();
+});
+</script>

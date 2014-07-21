@@ -1,0 +1,29 @@
+<div id="jq-primaryContent" style="width:1132px">
+
+<h1>Listing static_pages</h1>
+
+<table>
+  <tr>
+    <th style="font-size:16px;">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th style="font-size:16px;">Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @static_pages.each do |static_page| %>
+  <tr>
+    <td><%= static_page.name %></td>
+    <td><%=raw static_page.description %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Show', static_page %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Edit', edit_static_page_path(static_page) %></td>
+    <td width="50px" style="font-size:12px;"><%= link_to 'Destroy', static_page, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<p style="font-size:16px;">
+<%= link_to 'New Static page', new_static_page_path %>
+</p>
+</div>
